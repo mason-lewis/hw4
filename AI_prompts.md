@@ -153,3 +153,82 @@ No follow-up was required; the prompt names the visual direction, mascot details
 ### What was lacking from the first prompt
 
 No follow-up was required; the prompt specifies all three checks, screenshot storage, relative image links, and the HTML report format.
+
+## Problem 12 — Audit trail, safety, and finished harness
+
+### My prompt
+
+> problem 12: audit tail, safety, finish harness,
+>
+> keep an append only output/audit_trail.json of agent-loop activity (time, tool name, short args/results, stop reason) do not wipe between runs. also add soem safety rules to give the agent in prompts/prompt.md
+>
+> finsih the harness so it is clear hwo the system works. make sure to add an exec summary as well for a manager to explain the models, tools, safety rules, and specs (loop limits, results caps, models, how to run front + back)
+
+### What was lacking from the first prompt
+
+The prompt specifies the audit fields, persistence requirement, safety additions, and manager summary. The exact audit serialization format and numerical loop limits were left as implementation choices.
+
+## Problem 13 — Push to GitHub and submit the URL
+
+### My prompt
+
+> problem 13: push to github and submit the url
+>
+> push teh code in my hw4 fcolder to a public github repo. I will handle submitting it to canvas myself. dont put the real .env or campus_customs.db
+>
+> use gitignore and include .env.example with placeholders
+>
+> this is the expected layout in the image but you can include any other files that will be necessary for the program to run correclty
+>
+> the readme shoudl explain how to run it after placing the data pack
+
+The attached reference images specified the following repository layout and a separate local data pack:
+
+```text
+hw4/
+├── AI_prompts.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── README.md
+├── frontend/
+├── backend/
+│   ├── main.py
+│   ├── agent.py
+│   ├── models.py
+│   ├── tools.py
+│   └── prompts/
+│       └── prompt.md
+└── output/
+    ├── harness.md
+    ├── design.md
+    ├── usability.md
+    ├── app_check.html
+    ├── app_check_images/
+    └── audit_trail.json
+
+Local-only data pack (not in Git):
+data/
+├── campus_customs.db
+└── products/
+```
+
+### What was lacking from the first prompt
+
+The requested layout already included `AI_prompts.md`, but the implementation omitted the Problem 12 and Problem 13 entries. The final follow-up below requests that correction. Other follow-ups clarify the repository name and changed GitHub username.
+
+### Follow-up prompts
+
+> rename repo to campus-customs-agent-storefront
+
+> wait dont rename
+
+The rename request was canceled, so the repository remains named `hw4`.
+
+> i updated my username for git so make sure it still owrks
+
+The repository remote and README clone URL were updated to `https://github.com/mason-lewis/hw4`, and a successful push verified the connection.
+
+> make sure to inlcude problem 12 and 13 promts and push
+
+This follow-up adds the two missing prompt entries and requests that the updated log be pushed to GitHub.
