@@ -5,7 +5,7 @@ A React, Vite, and TypeScript storefront with a FastAPI backend and a Pydantic A
 ## 1. Clone and add the local data pack
 
 ```sh
-git clone https://github.com/lewism1016-wq/hw4.git
+git clone https://github.com/mason-lewis/hw4.git
 cd hw4
 ```
 
