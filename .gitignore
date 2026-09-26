@@ -1,0 +1,27 @@
+# Python environment and generated files
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Front-end dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local credentials and machine metadata
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Course data pack and local database files (never publish)
+/data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local test caches and logs
+.pytest_cache/
+*.log

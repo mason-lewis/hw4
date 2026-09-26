@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Customs — Problem 11 App Check</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #17263d;
+        background: #f6f4ed;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      header {
+        padding: 2.4rem max(1.25rem, calc((100vw - 1080px) / 2));
+        color: #fff;
+        background: #14263f;
+      }
+      header p { margin: 0; color: #b7cde0; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: .5rem 0 .35rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.3rem, 6vw, 4rem); font-weight: 500; }
+      header .intro { max-width: 42rem; color: #e0e8ef; font-size: 1rem; line-height: 1.55; letter-spacing: normal; text-transform: none; }
+      main { width: min(1080px, calc(100% - 2rem)); margin: 2rem auto 4rem; }
+      .check {
+        margin: 0 0 1.5rem;
+        padding: clamp(1rem, 3vw, 2rem);
+        border: 1px solid #dce1e3;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 12px 30px rgb(20 38 63 / 6%);
+      }
+      .check-heading { display: flex; align-items: center; gap: 1rem; }
+      .number { color: #587b9e; font-size: .8rem; font-weight: 700; letter-spacing: .1em; }
+      .eyebrow { margin: 0 0 .25rem; color: #55799c; font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+      h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 500; }
+      .status { margin-left: auto; padding: .4rem .7rem; border-radius: 999px; color: #24573c; background: #e9f3e8; font-size: .75rem; font-weight: 700; white-space: nowrap; }
+      .caption { margin: .9rem 0 1.1rem; color: #425166; line-height: 1.55; }
+      figure { margin: 0; }
+      figure img { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; object-position: top center; border: 1px solid #e2e6e5; border-radius: .65rem; background: #f6f4ed; }
+      figcaption { padding-top: .55rem; color: #657285; font-size: .78rem; }
+      footer { padding: 1.25rem; color: #637084; text-align: center; font-size: .8rem; }
+      @media (max-width: 560px) {
+        .check-heading { align-items: flex-start; gap: .65rem; }
+        .status { margin-left: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Campus Customs · Problem 11</p>
+      <h1>Live site checks</h1>
+      <p class="intro">Three browser checks against the shop’s database-backed chat, search, and guest cart.</p>
+    </header>
+    <main>
+      <section class="check" aria-labelledby="inventory-title">
+        <div class="check-heading">
+          <span class="number">01</span>
+          <div>
+            <p class="eyebrow">Database-backed chat</p>
+            <h2 id="inventory-title">Inventory and price answer</h2>
+          </div>
+          <span class="status">Verified</span>
+        </div>
+        <p class="caption">The shopper asked about the Basic Hoodie Big Yale in size M. The agent answered $68.00 and 5 in stock, matching the catalog price and inventory row.</p>
+        <figure>
+          <img src="app_check_images/inventory.jpg" alt="Chat answer reporting the Basic Hoodie Big Yale at $68 and five size M units in stock">
+          <figcaption>Chat reply and current product context.</figcaption>
+        </figure>
+      </section>
+
+      <section class="check" aria-labelledby="search-title">
+        <div class="check-heading">
+          <span class="number">02</span>
+          <div>
+            <p class="eyebrow">Structured catalog search</p>
+            <h2 id="search-title">Hoodie cards appear on the shop page</h2>
+          </div>
+          <span class="status">Verified</span>
+        </div>
+        <p class="caption">After “What hoodies do you have?”, the API returned eight structured matches and the page rendered them as product cards. The screenshot shows four distinct hoodies with images, names, and database prices.</p>
+        <figure>
+          <img src="app_check_images/chat_search.jpg" alt="Four hoodie product cards shown in the chat-matched results section">
+          <figcaption>Page-level matches for “What hoodies do you have?”</figcaption>
+        </figure>
+      </section>
+
+      <section class="check" aria-labelledby="cart-title">
+        <div class="check-heading">
+          <span class="number">03</span>
+          <div>
+            <p class="eyebrow">Problem 9 usability feature</p>
+            <h2 id="cart-title">Guest cart shows item and total prices</h2>
+          </div>
+          <span class="status">Verified</span>
+        </div>
+        <p class="caption">A guest added one size M hoodie and opened the cart. The cart shows $68.00 per item, a $68.00 line price and total, and the header counter updates to 1.</p>
+        <figure>
+          <img src="app_check_images/cart.jpg" alt="Guest cart with one size M hoodie, unit and line price of $68, total $68, and cart count one">
+          <figcaption>Guest cart contents and order summary.</figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer>Campus Customs · Site evidence captured September 26, 2026</footer>
+  </body>
+</html>

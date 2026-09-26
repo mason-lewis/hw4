@@ -1,0 +1,2 @@
+# Backend dependencies; install from the repository root with pip install -r requirements.txt.
+-r backend/requirements.txt
